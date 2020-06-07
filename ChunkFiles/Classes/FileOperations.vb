@@ -15,7 +15,8 @@ Namespace Classes
         Public Shared ReadOnly Property ChunkFolderLocation() As String
             Get
                 If String.IsNullOrWhiteSpace(_chunkFolderLocation) Then
-                    _chunkFolderLocation = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ApplicationSettings.GetChunkFolderLocation())
+                    _chunkFolderLocation = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+                                                        ApplicationSettings.GetChunkFolderLocation())
                 End If
 
                 Return _chunkFolderLocation
@@ -25,7 +26,8 @@ Namespace Classes
         Public Shared ReadOnly Property WorkFolderLocation() As String
             Get
                 If String.IsNullOrWhiteSpace(_workFolderLocation) Then
-                    _workFolderLocation = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ApplicationSettings.GetWorkFolderLocation())
+                    _workFolderLocation = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+                                                       ApplicationSettings.GetWorkFolderLocation())
                 End If
 
                 Return _workFolderLocation
@@ -147,7 +149,7 @@ Namespace Classes
                       Key .Index = Convert.ToInt32(verify.FileName.Split("_"c)(1).
                                                       Replace(".txt", ""))}).
                 OrderBy(Function(item) item.Index).
-                Select(Function(anonomousItem) anonomousItem.Name).ToList()
+                Select(Function(anonymousItem) anonymousItem.Name).ToList()
 
             verifyList.Add(New Verify() With {.FileName = "Total", .Count = totalLines})
 
