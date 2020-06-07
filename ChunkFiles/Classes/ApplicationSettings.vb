@@ -36,8 +36,8 @@ Namespace Classes
         Public Shared Sub LinesToSplit(ByVal value As String)
 
             Try
-                Dim applicationDirectoryName = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location)
-                Dim configFile = Path.Combine(applicationDirectoryName, $"{Assembly.GetExecutingAssembly().GetName().Name}.exe.config")
+                Dim applicationDirectoryName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
+                Dim configFile = Path.Combine(applicationDirectoryName,$"{Assembly.GetExecutingAssembly().GetName().Name}.exe.config")
                 Dim configFileMap = New ExeConfigurationFileMap With {.ExeConfigFilename = configFile}
                 Dim config = ConfigurationManager.OpenMappedExeConfiguration(configFileMap, ConfigurationUserLevel.None)
 
