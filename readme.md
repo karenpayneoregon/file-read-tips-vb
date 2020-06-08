@@ -12,7 +12,7 @@ In this repository there are two demos
 
 #### Microsoft TechNet article
 
-TBA
+[See article here](https://social.technet.microsoft.com/wiki/contents/articles/53922.reading-large-files-made-simple-vb-net.aspx)
 
 **User interface**
 
